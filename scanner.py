@@ -49,3 +49,16 @@ if detections:
         print("-", d)
 else:
     print("\nNo threats detected.")
+    
+    
+    log_entry = f"""
+Time: {datetime.now()}
+Input: {user_input}
+Risk Score: {risk_score}
+Severity: {severity}
+Threats: {', '.join(set(detections)) if detections else 'None'}
+--------------------------
+"""
+
+with open("scan_log.txt", "a") as file:
+    file.write(log_entry)
