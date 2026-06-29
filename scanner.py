@@ -51,7 +51,8 @@ else:
     print("\nNo threats detected.")
     
     
-    log_entry = f"""
+log_entry = f"""
+
 Time: {datetime.now()}
 Input: {user_input}
 Risk Score: {risk_score}
